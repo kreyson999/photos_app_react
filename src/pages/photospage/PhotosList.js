@@ -8,10 +8,9 @@ class PhotosList extends Component {
     photos: [],
     photoId: this.props.photoId,
     singlePhoto: null,
-    page: this.props.page
   }
   fetchPhotos() {
-    fetch(`https://picsum.photos/v2/list?page=${this.state.page}&limit=12`)
+    fetch(`https://picsum.photos/v2/list?page=${this.props.page}&limit=12`)
     .then(response => response.json())
     .then(data => this.setState({ photos: data }))
     .catch(e => console.log(e))
@@ -23,6 +22,7 @@ class PhotosList extends Component {
     this.fetchPhotos();
   }
   componentDidUpdate() {
+    this.fetchPhotos()
     if (this.state.photoId !== undefined) {
       fetch(`https://picsum.photos/id/${this.state.photoId}/info`)
       .then(response => response.json())
@@ -45,13 +45,15 @@ class PhotosList extends Component {
         </div>
         {this.state.singlePhoto !== null && this.state.photoId !== undefined ? <SinglePhotoWidget photo={this.state.singlePhoto} onClick={this.handleClosingPhoto}/> : null}
         <div className="pages-bar">
-          <Link to={`/photos/${this.props.page - 1}`}>
-            <button>
+          {this.props.page > 1 ? <Link to={`/photos/${this.props.page - 1}`}>
+            <button onClick={this.props.onClick.bind(this, 'previous')}>
               Previous Page
             </button>
-          </Link>
+          </Link> : <button className='disabled'>
+              Previous Page
+            </button>}
           <Link to={`/photos/${Number(this.props.page) + 1}`}>
-            <button>
+            <button onClick={this.props.onClick.bind(this, 'next')}>
               Next Page
             </button>
           </Link>

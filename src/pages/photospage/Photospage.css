@@ -120,6 +120,20 @@ aside a button span {
 aside h1 {
   font-weight: bold;
 }
+.pages-bar {
+  display: flex;
+  justify-content: space-between;
+}
+.pages-bar button {
+  font-weight: bold;
+  margin: 1rem;
+  background-color: var(--primary-color);
+  padding: 1rem;
+  cursor: pointer;
+}
+.pages-bar button.disabled {
+  cursor: not-allowed;
+}
 
 @media (min-width: 700px) {
   .filter-menu {

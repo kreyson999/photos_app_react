@@ -6,7 +6,7 @@ import Contactpage from './contactpage/Contactpage'
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route path="/" element={<Homepage/>}/>
