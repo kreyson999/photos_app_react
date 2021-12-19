@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/photos_app_react/static/css/main.04b4481a.css",
+    "main.js": "/photos_app_react/static/js/main.8eb84acd.js",
+    "static/media/homeimg2.jpg": "/photos_app_react/static/media/homeimg2.c2f1dc6d118ccba46688.jpg",
+    "static/media/homeimg3.jpg": "/photos_app_react/static/media/homeimg3.ae0c9beb66ecc29cf473.jpg",
+    "static/media/homeimg1.jpg": "/photos_app_react/static/media/homeimg1.cb6bd5990f0fb2ec29be.jpg",
+    "static/media/headerbg.jpg": "/photos_app_react/static/media/headerbg.60fb06b655bbda4b4820.jpg",
+    "static/media/AkiraExpanded.otf": "/photos_app_react/static/media/AkiraExpanded.5198553380d9bb727554.otf",
+    "index.html": "/photos_app_react/index.html",
+    "main.04b4481a.css.map": "/photos_app_react/static/css/main.04b4481a.css.map",
+    "main.8eb84acd.js.map": "/photos_app_react/static/js/main.8eb84acd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.04b4481a.css",
+    "static/js/main.8eb84acd.js"
+  ]
+}
