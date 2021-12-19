@@ -1,0 +1,109 @@
+@font-face {
+  font-family: "AkiraExpanded";
+  src: local("AkiraExpanded"), url("./AkiraExpanded.otf") format("truetype");
+}
+
+:root {
+  --font-akira-expanded: "AkiraExpanded";
+  --font-raleway: "Raleway", sans-serif;
+  --headerbg: url(./headerbg.jpg);
+  --primary-color: #ffe600;
+  --grey-color: #505050;
+  --default-box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.25);
+}
+body {
+  font-family: var(--font-raleway);
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  color: white;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)),
+    var(--headerbg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1170px;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .logo {
+  font-family: var(--font-akira-expanded);
+  font-size: 2rem;
+}
+header nav ul {
+  display: flex;
+  gap: 1rem;
+}
+header nav ul li a {
+  text-transform: lowercase;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+header nav ul li a.active {
+  cursor: pointer;
+  border-bottom: 2px solid var(--primary-color);
+}
+footer {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+.pageBody {
+  flex-grow: 1;
+}
+.header-center {
+  margin: 5rem 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.header-center h2 {
+  font-family: var(--font-akira-expanded);
+  font-size: 1.6rem;
+  padding-bottom: 2.5rem;
+}
+.header-container {
+  margin: 0 auto;
+  max-width: 600px;
+}
+.header-center .header-container form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 0.5rem;
+}
+.header-center .header-container form input[type="text"] {
+  width: 100%;
+  text-align: left;
+  background-color: white;
+  color: black;
+  padding: 1rem;
+}
+.header-center .header-container form button {
+  background-color: var(--primary-color);
+  color: var(--grey-color);
+  cursor: pointer;
+}
+.header-center .header-container form button span {
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.35rem;
+}

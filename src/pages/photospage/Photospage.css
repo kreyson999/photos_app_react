@@ -1,0 +1,131 @@
+.filter-menu {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: right;
+}
+.filter-menu button {
+  gap: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.filter-menu button .btn-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.filter-menu button .btn-icon {
+  background-color: var(--primary-color);
+}
+.filter-menu button .btn-icon span {
+  color: var(--grey-color);
+  font-size: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.35rem;
+}
+.photos-list {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.photos-list a {
+  cursor: pointer;
+  position: relative;
+  width: 48%;
+  height: 20rem;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.photo-widget {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.photo-widget img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.photo-widget .on-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+}
+.photo-widget .on-hover:hover {
+  opacity: 1;
+}
+.photo-widget .on-hover h1 {
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.single-photo-widget {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem 0;
+}
+.single-photo-widget .container {
+  overflow-y: scroll;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.single-photo-widget .container .img-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(158, 158, 158);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.single-photo-widget .container .img-container img {
+  position: relative;
+  width: 100%;
+  object-fit: contain;
+}
+aside {
+  padding: 1rem;
+}
+aside a {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+aside a button span {
+  color: white;
+}
+aside h1 {
+  font-weight: bold;
+}
+
+@media (min-width: 700px) {
+  .filter-menu {
+    padding: 1rem 0;
+  }
+  .photos-list a {
+    width: 32%;
+  }
+}
