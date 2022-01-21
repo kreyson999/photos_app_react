@@ -1,12 +1,12 @@
 # Simple photos library built using React and Picsum Photos API
 
-You can checkout the site live: [DEMO](https://kreyson999.github.io/photos_app_react/)
+##You can checkout the site live: [DEMO](https://kreyson999.github.io/photos_app_react/)
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+### Available Scripts
 
 In the project directory, you can run:
 
